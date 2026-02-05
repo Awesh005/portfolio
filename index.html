@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO Meta Tags -->
+    <title>MD Awesh | Full Stack Developer & Software Engineer</title>
+    <meta name="description" content="Portfolio of MD Awesh, a B.Tech Computer Science student specializing in MERN stack, Python, and scalable software solutions." />
+    <meta name="keywords" content="MD Awesh, Full Stack Developer, Software Engineer, React Developer, MERN Stack, Python Engineer, Jharkhand Rai University" />
+    <meta name="author" content="MD Awesh" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://awesh.dev/" />
+    <meta property="og:title" content="MD Awesh | Full Stack Developer" />
+    <meta property="og:description" content="Building resilient, high-performance web applications and architecting digital experiences with precision." />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="MD Awesh | Full Stack Developer" />
+    <meta property="twitter:description" content="Building resilient, high-performance web applications and architecting digital experiences with precision." />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              indigo: { 500: '#6366f1', 600: '#4f46e5', 700: '#4338ca' },
+              dark: { bg: '#0a0e23', surface: '#0f172a', border: '#1e293b' }
+            },
+            fontFamily: { sans: ['Inter', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'] }
+          }
+        }
+      }
+    </script>
+    <style>
+      body { transition: background-color 0.3s ease, color 0.3s ease; }
+      .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+      .dark .glass { background: rgba(15, 23, 42, 0.6); }
+      ::-webkit-scrollbar { width: 6px; }
+      ::-webkit-scrollbar-track { background: transparent; }
+      ::-webkit-scrollbar-thumb { background: #6366f1; border-radius: 10px; }
+      .line-clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+    </style>
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.40.0",
+    "framer-motion": "https://esm.sh/framer-motion@^11.11.11",
+    "next/": "https://esm.sh/next@^16.1.6/",
+    "nodemailer": "https://esm.sh/nodemailer@^8.0.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-white text-zinc-900 dark:bg-dark-bg dark:text-zinc-100 overflow-x-hidden antialiased">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

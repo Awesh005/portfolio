@@ -8,7 +8,7 @@ const Skills: React.FC = () => {
   const categories: Skill['category'][] = ['languages', 'frontend', 'backend', 'databases', 'tools'];
   
   return (
-    <section id="skills" className="py-32 bg-zinc-50 dark:bg-zinc-900/30 border-y border-zinc-100 dark:border-zinc-800/50">
+    <section id="skills" className="py-32 bg-zinc-50 border-y border-zinc-100">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
           <motion.div 
@@ -21,7 +21,7 @@ const Skills: React.FC = () => {
               Technical <br />
               <span className="text-indigo-500">Stack</span>.
             </h2>
-            <p className="text-zinc-500 dark:text-zinc-400 font-medium leading-relaxed mb-12">
+            <p className="text-zinc-500 font-medium leading-relaxed mb-12">
               A curated selection of technologies I leverage to build robust, 
               scalable, and high-performance digital solutions.
             </p>
@@ -44,7 +44,7 @@ const Skills: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="p-8 rounded-[2rem] bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm hover:shadow-xl hover:border-indigo-500/30 transition-all group"
+                className="p-8 rounded-[2rem] bg-white border border-zinc-200 shadow-sm hover:shadow-xl hover:border-indigo-500/30 transition-all group"
               >
                 <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-indigo-500 mb-8 flex items-center gap-3">
                   <span className="w-1 h-1 rounded-full bg-indigo-500"></span>
@@ -54,7 +54,7 @@ const Skills: React.FC = () => {
                   {SKILLS.filter(s => s.category === cat).map((skill) => (
                     <div
                       key={skill.name}
-                      className="flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-100 dark:border-zinc-700/50 text-xs font-bold text-zinc-700 dark:text-zinc-300 group-hover:border-indigo-500/20 transition-colors"
+                      className="flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-50 border border-zinc-100 text-xs font-bold text-zinc-700 group-hover:border-indigo-500/20 transition-colors"
                     >
                       <span className="text-base">{skill.icon}</span>
                       {skill.name}

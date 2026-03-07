@@ -1,21 +1,21 @@
 :root {
-  --dark-bg: #0a0e23;
-  --dark-surface: #0f172a;
-  --dark-border: #1e293b;
+  /* Theme variables can be added here if needed */
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
 }
 
 body {
   transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: white;
 }
 
 .glass {
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-}
-
-.dark .glass {
-  background: rgba(15, 23, 42, 0.6);
 }
 
 /* Custom Animations */

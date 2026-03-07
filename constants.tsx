@@ -33,38 +33,50 @@ export const PROJECTS: Project[] = [
 
 export const SKILLS: Skill[] = [
   // Programming Languages
-  { name: 'Python', icon: '🐍', category: 'languages' },
   { name: 'Java', icon: '☕', category: 'languages' },
+  { name: 'JavaScript', icon: 'JS', category: 'languages' },
+  { name: 'HTML5', icon: '🌐', category: 'languages' },
+  { name: 'CSS3', icon: '🎨', category: 'languages' },
   { name: 'SQL', icon: '🗄️', category: 'languages' },
+  { name: 'NoSQL', icon: '📊', category: 'languages' },
   
   // Frontend
   { name: 'React.js', icon: '⚛️', category: 'frontend' },
-  { name: 'JavaScript', icon: 'JS', category: 'frontend' },
-  { name: 'HTML', icon: '🌐', category: 'frontend' },
-  { name: 'CSS', icon: '🎨', category: 'frontend' },
+  { name: 'Tailwind CSS', icon: '🌊', category: 'frontend' },
   
   // Backend
   { name: 'Node.js', icon: '🟢', category: 'backend' },
-  { name: 'Express', icon: '🚂', category: 'backend' },
+  { name: 'Express.js', icon: '🚂', category: 'backend' },
+  { name: 'REST API', icon: '🔌', category: 'backend' },
   
   // Databases
-  { name: 'MySQL', icon: '🐬', category: 'databases' },
   { name: 'MongoDB', icon: '🍃', category: 'databases' },
-  { name: 'Firebase', icon: '🔥', category: 'databases' },
   
   // Tools & Others
-  { name: 'Git', icon: '📊', category: 'tools' },
-  { name: 'Power BI', icon: '📈', category: 'tools' },
-  { name: 'Excel', icon: '📅', category: 'tools' },
-  { name: 'GCP', icon: '☁️', category: 'tools' },
-  { name: 'Jupyter', icon: '📓', category: 'tools' },
+  { name: 'Git/GitHub', icon: '📊', category: 'tools' },
+  { name: 'VS Code', icon: '💻', category: 'tools' },
+  { name: 'MERN Stack', icon: '🏗️', category: 'tools' },
 ];
 
 export const EXPERIENCES: Experience[] = [
   {
-    company: 'Vikash TechSec Pvt Ltd.',
-    role: 'Bidding Executive',
-    period: 'Oct 2025 - Present',
+    company: 'BN IntelHub Pvt Ltd, STPI Ranchi',
+    role: 'Full Stack Developer',
+    period: 'Feb 26 – Present',
+    description: [
+      'Developed and deployed multiple responsive websites using React.js, JavaScript, HTML, CSS and Node.js.',
+      'Built and maintained the company service platform for showcasing IT services and solutions.',
+      'Designed and developed the official BN IntelHub company website with modern UI and optimized performance.',
+      'Developed and deployed educational websites including Astro OM Education & Research and American Junior International School.',
+      'Implemented responsive design and smooth UI animations to enhance user experience.',
+      'Managed project deployment using GitHub and Vercel and maintained version control.',
+      'Collaborated on frontend design, layout structure, and website optimization.'
+    ]
+  },
+  {
+    company: 'Vikash TechSec Pvt Ltd, Ranchi',
+    role: 'GeM Bidding Executive',
+    period: 'Oct 25 – Jan 26',
     description: [
       'Identified suitable tenders and bids on the Government e-Marketplace (GeM) portal.',
       'Prepared and submitted comprehensive technical and financial documentation for bids.',
@@ -115,8 +127,8 @@ Key Details:
 - Role: Full Stack Developer / Software Engineer
 - Education: B.Tech CSE from Jharkhand Rai University (79% CGPA).
 - Top Projects: ERP Examination Module (MERN), Python ATM System, Firebase Secure Login.
-- Technical Skills: React, Node.js, Python, Java, SQL, MongoDB, Firebase.
-- Experience: Bidding Executive at Vikash TechSec, Account Manager at Swevex Tech.
+- Technical Skills: Java, JavaScript, HTML5, CSS3, SQL, NoSQL, React.js, Tailwind CSS, Node.js, Express.js, REST API, MongoDB, Git/GitHub, VS Code, MERN Stack.
+- Experience: Full Stack Developer at BN IntelHub, GeM Bidding Executive at Vikash TechSec, Account Manager at Swevex Tech.
 - Soft Skills: Teamwork, Problem-solving, Creativity.
 
 Tone: Professional, confident, and helpful. 

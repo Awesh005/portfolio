@@ -23,6 +23,7 @@ export default defineConfig(({ mode }) => {
         rollupOptions: {
           output: {
             manualChunks: {
+              'three': ['three', '@react-three/fiber', '@react-three/drei'],
               'google-genai': ['@google/genai'],
               'vendor': ['react', 'react-dom'],
               'animation': ['framer-motion'],

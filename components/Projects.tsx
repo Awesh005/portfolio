@@ -7,7 +7,7 @@ import GithubProjects from './GithubProjects';
 
 const Projects: React.FC = () => {
   return (
-    <section id="projects" className="py-32 bg-white dark:bg-dark-bg">
+    <section id="projects" className="py-32 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -23,11 +23,11 @@ const Projects: React.FC = () => {
           </div>
           
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-10">
-            <h2 className="text-5xl md:text-7xl font-black tracking-tighter leading-[0.9] dark:text-white text-zinc-900">
+            <h2 className="text-5xl md:text-7xl font-black tracking-tighter leading-[0.9] text-zinc-900">
               Featured <br />
               <span className="text-indigo-500">Works</span>.
             </h2>
-            <p className="text-xl dark:text-zinc-400 text-zinc-500 font-medium max-w-md leading-relaxed">
+            <p className="text-xl text-zinc-500 font-medium max-w-md leading-relaxed">
               A selection of projects demonstrating proficiency in full-stack engineering, 
               software architecture, and user-centric design.
             </p>
@@ -51,7 +51,7 @@ const Projects: React.FC = () => {
         <motion.div 
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          className="pt-32 border-t border-zinc-100 dark:border-zinc-800"
+          className="pt-32 border-t border-zinc-100"
         >
           <GithubProjects />
         </motion.div>

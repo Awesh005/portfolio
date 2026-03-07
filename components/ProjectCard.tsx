@@ -1,6 +1,6 @@
 
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { Project } from '../types';
 
 interface ProjectCardProps {
@@ -8,22 +8,36 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end start"]
+  });
+
+  const scale = useTransform(scrollYProgress, [0, 0.5], [1.2, 1]);
+  const opacity = useTransform(scrollYProgress, [0, 0.3], [0, 1]);
+
   return (
-    <div className="group relative bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-[2.5rem] overflow-hidden transition-all duration-700 hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] dark:hover:shadow-[0_30px_60px_-15px_rgba(255,255,255,0.05)]">
+    <motion.div 
+      ref={containerRef}
+      style={{ opacity }}
+      className="group relative bg-white border border-zinc-200 rounded-[2.5rem] overflow-hidden transition-all duration-700 hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)]"
+    >
       <div className="relative aspect-[16/11] overflow-hidden">
-        <img 
+        <motion.img 
+          style={{ scale }}
           src={project.image} 
           alt={project.title} 
           loading="lazy"
           referrerPolicy="no-referrer"
-          className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+          className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500"></div>
         
         {/* Floating Tags */}
         <div className="absolute top-6 left-6 flex flex-wrap gap-2">
           {project.tags.slice(0, 2).map(tag => (
-            <span key={tag} className="px-3 py-1 bg-white/90 dark:bg-zinc-900/90 backdrop-blur-md text-[9px] font-black uppercase tracking-widest rounded-full shadow-sm">
+            <span key={tag} className="px-3 py-1 bg-white/90 backdrop-blur-md text-[9px] font-black uppercase tracking-widest rounded-full shadow-sm">
               {tag}
             </span>
           ))}
@@ -31,22 +45,22 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       </div>
       
       <div className="p-10">
-        <h3 className="text-2xl font-black dark:text-white text-zinc-900 mb-4 tracking-tight group-hover:text-indigo-500 transition-colors duration-300">
+        <h3 className="text-2xl font-black text-zinc-900 mb-4 tracking-tight group-hover:text-indigo-500 transition-colors duration-300">
           {project.title}
         </h3>
         
-        <p className="text-zinc-500 dark:text-zinc-400 text-sm mb-8 leading-relaxed line-clamp-2 font-medium">
+        <p className="text-zinc-500 text-sm mb-8 leading-relaxed line-clamp-2 font-medium">
           {project.description}
         </p>
         
-        <div className="flex items-center justify-between pt-8 border-t border-zinc-100 dark:border-zinc-800">
+        <div className="flex items-center justify-between pt-8 border-t border-zinc-100">
           <a 
             href={project.link} 
             target="_blank" rel="noopener noreferrer"
-            className="flex items-center gap-3 text-[10px] font-black uppercase tracking-widest text-zinc-900 dark:text-white group/link"
+            className="flex items-center gap-3 text-[10px] font-black uppercase tracking-widest text-zinc-900 group/link"
           >
             Case Study
-            <div className="w-8 h-8 rounded-full border border-zinc-200 dark:border-zinc-800 flex items-center justify-center group-hover/link:bg-indigo-600 group-hover/link:border-indigo-600 group-hover/link:text-white transition-all">
+            <div className="w-8 h-8 rounded-full border border-zinc-200 flex items-center justify-center group-hover/link:bg-indigo-600 group-hover/link:border-indigo-600 group-hover/link:text-white transition-all">
               <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
             </div>
           </a>
@@ -58,7 +72,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           )}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

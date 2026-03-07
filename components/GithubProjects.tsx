@@ -44,7 +44,7 @@ const GithubProjects: React.FC = () => {
     return (
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-pulse">
         {[1, 2, 3, 4, 5, 6].map((i) => (
-          <div key={i} className="h-64 bg-zinc-100 dark:bg-zinc-800/50 rounded-2xl border border-zinc-200 dark:border-zinc-800"></div>
+          <div key={i} className="h-64 bg-zinc-100 rounded-2xl border border-zinc-200"></div>
         ))}
       </div>
     );
@@ -54,11 +54,11 @@ const GithubProjects: React.FC = () => {
     <div className="space-y-12">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-4">
-          <div className="w-12 h-12 rounded-2xl bg-zinc-900 dark:bg-white flex items-center justify-center text-white dark:text-zinc-900">
+          <div className="w-12 h-12 rounded-2xl bg-zinc-900 flex items-center justify-center text-white">
             <Github size={24} />
           </div>
           <div>
-            <h3 className="text-xl font-black dark:text-white text-zinc-900 uppercase tracking-tighter">Open Source</h3>
+            <h3 className="text-xl font-black text-zinc-900 uppercase tracking-tighter">Open Source</h3>
             <p className="text-[10px] font-black uppercase tracking-[0.3em] text-zinc-500">Live from GitHub</p>
           </div>
         </div>
@@ -80,10 +80,10 @@ const GithubProjects: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: idx * 0.05 }}
-            className="group relative bg-white dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800 rounded-[2.5rem] hover:border-indigo-500/50 transition-all duration-500 flex flex-col overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-indigo-500/10"
+            className="group relative bg-white border border-zinc-200 rounded-[2.5rem] hover:border-indigo-500/50 transition-all duration-500 flex flex-col overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-indigo-500/10"
           >
             {/* Preview Image */}
-            <div className="relative h-48 overflow-hidden bg-zinc-100 dark:bg-zinc-800">
+            <div className="relative h-48 overflow-hidden bg-zinc-100">
               <img 
                 src={`https://opengraph.githubassets.com/1/${repo.owner.login}/${repo.name}`}
                 alt={repo.name}
@@ -143,15 +143,15 @@ const GithubProjects: React.FC = () => {
                 </div>
               </div>
 
-              <h4 className="text-xl font-black dark:text-white text-zinc-900 mb-3 tracking-tight group-hover:text-indigo-500 transition-colors">
+              <h4 className="text-xl font-black text-zinc-900 mb-3 tracking-tight group-hover:text-indigo-500 transition-colors">
                 {repo.name.replace(/-/g, ' ')}
               </h4>
 
-              <p className="text-sm dark:text-zinc-400 text-zinc-500 line-clamp-2 leading-relaxed mb-6 flex-1">
+              <p className="text-sm text-zinc-500 line-clamp-2 leading-relaxed mb-6 flex-1">
                 {repo.description || "No description provided for this repository."}
               </p>
 
-              <div className="flex items-center justify-between pt-6 border-t border-zinc-100 dark:border-zinc-800">
+              <div className="flex items-center justify-between pt-6 border-t border-zinc-100">
                 <span className="text-[10px] font-black uppercase tracking-widest text-zinc-400">
                   Updated {new Date(repo.updated_at).getFullYear()}
                 </span>
@@ -159,7 +159,7 @@ const GithubProjects: React.FC = () => {
                   href={repo.html_url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-500 hover:text-indigo-500 transition-colors"
+                  className="p-2 rounded-full bg-zinc-100 text-zinc-500 hover:text-indigo-500 transition-colors"
                 >
                   <ExternalLink size={14} />
                 </a>
@@ -176,7 +176,7 @@ const GithubProjects: React.FC = () => {
           rel="noopener noreferrer"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="px-10 py-4 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 rounded-2xl text-xs font-black uppercase tracking-[0.3em] flex items-center gap-3 shadow-xl shadow-zinc-500/10 dark:shadow-none"
+          className="px-10 py-4 bg-zinc-900 text-white rounded-2xl text-xs font-black uppercase tracking-[0.3em] flex items-center gap-3 shadow-xl shadow-zinc-500/10"
         >
           View All Repositories
           <Github size={16} />

@@ -21,7 +21,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-32 bg-white dark:bg-dark-bg">
+    <section id="contact" className="py-32 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-20">
           <motion.div 
@@ -37,33 +37,33 @@ const Contact: React.FC = () => {
               <span className="h-px w-12 bg-indigo-500/30"></span>
             </div>
             
-            <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-10 leading-[0.9] dark:text-white text-zinc-900">
+            <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-10 leading-[0.9] text-zinc-900">
               Let's <br />
               <span className="text-indigo-500">Connect</span>.
             </h2>
             
-            <p className="text-xl dark:text-zinc-400 text-zinc-600 leading-relaxed max-w-md mb-12">
+            <p className="text-xl text-zinc-600 leading-relaxed max-w-md mb-12">
               I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
             </p>
             
             <div className="space-y-8">
               <div className="group flex items-center gap-6">
-                <div className="w-14 h-14 rounded-2xl bg-zinc-50 dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 flex items-center justify-center text-indigo-500 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-500">
+                <div className="w-14 h-14 rounded-2xl bg-zinc-50 border border-zinc-100 flex items-center justify-center text-indigo-500 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-500">
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                 </div>
                 <div>
                   <p className="text-[10px] font-black text-zinc-400 uppercase tracking-widest mb-1">Direct Email</p>
-                  <a href="mailto:roshanawesh@gmail.com" className="text-lg font-bold dark:text-white text-zinc-900 hover:text-indigo-500 transition-colors">roshanawesh@gmail.com</a>
+                  <a href="mailto:roshanawesh@gmail.com" className="text-lg font-bold text-zinc-900 hover:text-indigo-500 transition-colors">roshanawesh@gmail.com</a>
                 </div>
               </div>
               
               <div className="group flex items-center gap-6">
-                <div className="w-14 h-14 rounded-2xl bg-zinc-50 dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 flex items-center justify-center text-indigo-500 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-500">
+                <div className="w-14 h-14 rounded-2xl bg-zinc-50 border border-zinc-100 flex items-center justify-center text-indigo-500 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-500">
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
                 </div>
                 <div>
                   <p className="text-[10px] font-black text-zinc-400 uppercase tracking-widest mb-1">Base Location</p>
-                  <p className="text-lg font-bold dark:text-white text-zinc-900">Ranchi, Jharkhand</p>
+                  <p className="text-lg font-bold text-zinc-900">Ranchi, Jharkhand</p>
                 </div>
               </div>
             </div>
@@ -75,40 +75,40 @@ const Contact: React.FC = () => {
             viewport={{ once: true }}
             className="lg:col-span-7"
           >
-            <div className="bg-zinc-50 dark:bg-zinc-900/50 border border-zinc-100 dark:border-zinc-800 p-10 md:p-16 rounded-[3rem] shadow-2xl shadow-indigo-500/5">
+            <div className="bg-zinc-50 border border-zinc-100 p-10 md:p-16 rounded-[3rem] shadow-2xl shadow-indigo-500/5">
               <form onSubmit={handleSubmit} className="space-y-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div className="space-y-3">
-                    <label className="text-[10px] font-black dark:text-zinc-500 text-zinc-400 uppercase tracking-[0.2em] ml-1">Your Name</label>
+                    <label className="text-[10px] font-black text-zinc-400 uppercase tracking-[0.2em] ml-1">Your Name</label>
                     <input 
                       name="name" 
                       required 
                       type="text" 
                       disabled={loading}
-                      className="w-full px-6 py-5 rounded-2xl dark:bg-zinc-800 bg-white border border-zinc-200 dark:border-zinc-700 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 focus:outline-none dark:text-white text-zinc-900 transition-all disabled:opacity-50 font-medium" 
+                      className="w-full px-6 py-5 rounded-2xl bg-white border border-zinc-200 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 focus:outline-none text-zinc-900 transition-all disabled:opacity-50 font-medium" 
                       placeholder="Enter your name" 
                     />
                   </div>
                   <div className="space-y-3">
-                    <label className="text-[10px] font-black dark:text-zinc-500 text-zinc-400 uppercase tracking-[0.2em] ml-1">Email Address</label>
+                    <label className="text-[10px] font-black text-zinc-400 uppercase tracking-[0.2em] ml-1">Email Address</label>
                     <input 
                       name="email" 
                       required 
                       type="email" 
                       disabled={loading}
-                      className="w-full px-6 py-5 rounded-2xl dark:bg-zinc-800 bg-white border border-zinc-200 dark:border-zinc-700 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 focus:outline-none dark:text-white text-zinc-900 transition-all disabled:opacity-50 font-medium" 
+                      className="w-full px-6 py-5 rounded-2xl bg-white border border-zinc-200 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 focus:outline-none text-zinc-900 transition-all disabled:opacity-50 font-medium" 
                       placeholder="name@company.com" 
                     />
                   </div>
                 </div>
                 <div className="space-y-3">
-                  <label className="text-[10px] font-black dark:text-zinc-500 text-zinc-400 uppercase tracking-[0.2em] ml-1">Message</label>
+                  <label className="text-[10px] font-black text-zinc-400 uppercase tracking-[0.2em] ml-1">Message</label>
                   <textarea 
                     name="message" 
                     required 
                     rows={5} 
                     disabled={loading}
-                    className="w-full px-6 py-5 rounded-2xl dark:bg-zinc-800 bg-white border border-zinc-200 dark:border-zinc-700 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 focus:outline-none dark:text-white text-zinc-900 transition-all disabled:opacity-50 font-medium resize-none" 
+                    className="w-full px-6 py-5 rounded-2xl bg-white border border-zinc-200 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 focus:outline-none text-zinc-900 transition-all disabled:opacity-50 font-medium resize-none" 
                     placeholder="How can I help you?"
                   ></textarea>
                 </div>
@@ -116,7 +116,7 @@ const Contact: React.FC = () => {
                 <button 
                   type="submit" 
                   disabled={loading}
-                  className="w-full bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 font-black uppercase tracking-[0.3em] py-6 rounded-2xl hover:bg-indigo-600 dark:hover:bg-indigo-500 hover:text-white transition-all transform active:scale-[0.98] shadow-2xl shadow-zinc-900/10 dark:shadow-white/5 disabled:bg-zinc-500 disabled:cursor-not-allowed flex items-center justify-center gap-4 text-[10px]"
+                  className="w-full bg-zinc-900 text-white font-black uppercase tracking-[0.3em] py-6 rounded-2xl hover:bg-indigo-600 hover:text-white transition-all transform active:scale-[0.98] shadow-2xl shadow-zinc-900/10 disabled:bg-zinc-500 disabled:cursor-not-allowed flex items-center justify-center gap-4 text-[10px]"
                 >
                   {loading ? (
                     <>

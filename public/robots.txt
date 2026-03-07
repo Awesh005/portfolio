@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Allow: /resume
+Disallow: /api/
+Disallow: /vendor/
+Disallow: /.env
+
+Sitemap: https://awesh.dev/sitemap.xml

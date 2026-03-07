@@ -18,6 +18,19 @@ export default defineConfig(({ mode }) => {
         alias: {
           '@': path.resolve(__dirname, '.'),
         }
+      },
+      build: {
+        rollupOptions: {
+          output: {
+            manualChunks: {
+              'google-genai': ['@google/genai'],
+              'vendor': ['react', 'react-dom'],
+              'animation': ['framer-motion'],
+              'icons': ['lucide-react']
+            }
+          }
+        },
+        chunkSizeWarningLimit: 1000
       }
     };
 });

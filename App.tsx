@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense, lazy } from 'react';
 import Layout from './components/Layout';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -8,8 +8,9 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Experience from './components/Experience';
 import Contact from './components/Contact';
-import AIChat from './components/AIChat';
 import { Theme } from './types';
+
+const AIChat = lazy(() => import('./components/AIChat'));
 
 const App: React.FC = () => {
   const [theme, setTheme] = useState<Theme>('dark');
@@ -37,7 +38,9 @@ const App: React.FC = () => {
         <Experience />
         <Contact />
       </main>
-      <AIChat />
+      <Suspense fallback={null}>
+        <AIChat />
+      </Suspense>
       <footer className="py-12 border-t border-zinc-100 dark:border-zinc-800 text-center">
         <p className="text-[10px] font-black uppercase tracking-[0.4em] text-zinc-400">
           © {new Date().getFullYear()} MD AWESH • ENGINEERED WITH PRECISION

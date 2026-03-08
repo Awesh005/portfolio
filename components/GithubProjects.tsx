@@ -28,8 +28,8 @@ const GithubProjects: React.FC = () => {
       .then((data) => {
         if (Array.isArray(data)) {
           const filtered = data
-            .sort((a, b) => b.stargazers_count - a.stargazers_count)
-            .slice(0, 6); // Show top 6
+            .sort((a, b) => new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime())
+            .slice(0, 6); // Show latest 6
           setRepos(filtered);
         }
         setLoading(false);
